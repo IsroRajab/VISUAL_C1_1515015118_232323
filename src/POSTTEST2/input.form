@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="279" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="nik" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="ttl" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="alamat" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="kelurahan" min="-2" max="-2" attributes="0"/>
+                          <Component id="rtrw" min="-2" max="-2" attributes="0"/>
+                          <Component id="kecamatan" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="agama" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="status" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="pekerjaan" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="warga" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="berlaku" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="kelamin" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="nama" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="isiberlaku" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="isilaki" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="isicewe" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="darah" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="isidarah" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="isitempat" pref="124" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="isitanggal" min="-2" pref="149" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="isikelurahan" alignment="0" max="32767" attributes="0"/>
+                  <Component id="isipekerjaan" max="32767" attributes="0"/>
+                  <Component id="isiwarga" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                  <Component id="isialamat" alignment="0" max="32767" attributes="0"/>
+                  <Component id="isinik" max="32767" attributes="0"/>
+                  <Component id="isiagama" alignment="0" max="32767" attributes="0"/>
+                  <Component id="isistatus" alignment="0" pref="279" max="32767" attributes="0"/>
+                  <Component id="isikecamatan" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="isirt" min="-2" pref="43" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel8" min="-2" pref="11" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="isirw" min="-2" pref="57" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="isinama" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="43" pref="218" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="nik" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="isinik" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                      <Component id="nama" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="isinama" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isitempat" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="isitanggal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ttl" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isilaki" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="isicewe" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="darah" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="isidarah" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="kelamin" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isialamat" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="alamat" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isirt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="isirw" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rtrw" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isikelurahan" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="kelurahan" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isikecamatan" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="kecamatan" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isiagama" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="agama" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isistatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="status" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isipekerjaan" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="pekerjaan" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isiwarga" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="warga" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isiberlaku" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="berlaku" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="FORM KARTU TANDA PENDUDUK"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="SILAHKAN ISI"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nik">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NIK"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="isinik">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="isinikActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ttl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tempat/Tgl Lahir"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="isitempat">
+    </Component>
+    <Component class="javax.swing.JTextField" name="isitanggal">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="isitanggalActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="kelamin">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Jenis Kelamin"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="isilaki">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="buttonGroup1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Laki-laki"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="isicewe">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="buttonGroup1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Perempuan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="alamat">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Alamat"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="isialamat">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="isialamatActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="rtrw">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RT / RW"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="isirt">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="/"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="isirw">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="isirwActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="kelurahan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kel / Desa"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="isikelurahan">
+    </Component>
+    <Component class="javax.swing.JLabel" name="kecamatan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kecamatan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="isikecamatan">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="isikecamatanActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="agama">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Agama "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="isiagama">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="6">
+            <StringItem index="0" value="--pilih--"/>
+            <StringItem index="1" value="ISLAM"/>
+            <StringItem index="2" value="KRISTEN"/>
+            <StringItem index="3" value="KHATOLIK"/>
+            <StringItem index="4" value="BUDHA"/>
+            <StringItem index="5" value="KONGHUCU"/>
+          </StringArray>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="status">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Status Perkawinan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="isistatus">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="3">
+            <StringItem index="0" value="--pilih--"/>
+            <StringItem index="1" value="MENIKAH"/>
+            <StringItem index="2" value="BELUM MENIKAH"/>
+          </StringArray>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="pekerjaan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pekerjaan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="isipekerjaan">
+    </Component>
+    <Component class="javax.swing.JLabel" name="warga">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kewarganegaraan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="isiwarga">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="3">
+            <StringItem index="0" value="--pilih--"/>
+            <StringItem index="1" value="WNI"/>
+            <StringItem index="2" value="WNA"/>
+          </StringArray>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="berlaku">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Masa Berlaku"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="isiberlaku">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Reset"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Register"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="darah">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Gol. Darah"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="isidarah">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="5">
+            <StringItem index="0" value="--pilih--"/>
+            <StringItem index="1" value="A"/>
+            <StringItem index="2" value="B"/>
+            <StringItem index="3" value="AB"/>
+            <StringItem index="4" value="O"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="isidarahActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nama">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nama"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="isinama">
+    </Component>
+  </SubComponents>
+</Form>
