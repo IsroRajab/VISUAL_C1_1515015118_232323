@@ -6,6 +6,7 @@
 package POSTTEST6.latihan6;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class FormDataBuku extends javax.swing.JFrame {
@@ -21,6 +22,7 @@ public class FormDataBuku extends javax.swing.JFrame {
     
   private void InitTable(){
         model = new DefaultTableModel();
+        model.addColumn("ID BUKU");
         model.addColumn("Judul");
         model.addColumn("Penulis");
         model.addColumn("Harga");
@@ -34,10 +36,11 @@ public class FormDataBuku extends javax.swing.JFrame {
           stt = con.createStatement();
           rss = stt.executeQuery(sql);
           while(rss.next()){
-              Object[] o = new Object[3];
-              o[0] = rss.getString("judul");
-              o[1] = rss.getString("penulis");
-              o[2] = rss.getInt("harga");
+              Object[] o = new Object[4];
+              o[0] = rss.getString("id");
+              o[1] = rss.getString("judul");
+              o[2] = rss.getString("penulis");
+              o[3] = rss.getInt("harga");
               model.addRow(o);
           }
       }catch(SQLException e){
@@ -55,7 +58,61 @@ public class FormDataBuku extends javax.swing.JFrame {
             System.out.println(e.getMessage());
         }
     }
-
+  public boolean UbahData(String id, String judul,String penulis,String harga){
+      try {
+          String sql = "UPDATE buku set judul="+judul
+                  +"', penulis='"+penulis+"',harga='"+harga+"WHERE id="+id+";";
+          stt = con.createStatement();
+          stt.executeUpdate(sql);
+          return true;
+      }catch(SQLException e){
+          System.out.println(e.getMessage());
+          return false;
+      }
+  }
+  public boolean HapusData(String id){
+      try {
+          String sql = "DELETE FROM buku WHERE id="+id+";";
+          stt = con.createStatement();
+          stt.executeUpdate(sql);
+          return true;
+      }catch(SQLException e){
+          System.out.println(e.getMessage());
+          return false;
+      }
+  }
+  private boolean validasi(String judul, String penulis){
+      try{
+          String sql ="SELECT * FROM buku WHERE judul='"+judul+"' AND penulis='"+penulis+"';";
+          stt = con.createStatement();
+          rss = stt.executeQuery(sql);
+          if (rss.next())
+              return true;
+          else
+              return false;
+      }catch (SQLException e){
+          System.out.println(e.getMessage());
+          return false;
+      }
+  }
+  private void PencarianData(String by, String cari)
+  {
+      try{
+          String sql = "SELEECT * FROM buku where "+by+" Like '%"+cari+"%';";
+          stt = con.createStatement();
+          stt.executeQuery(sql);
+          while(rss.next()){
+              Object[] data = new Object[4];
+              data[0] = rss.getString("id");
+              data[1] = rss.getString("judul");
+              data[2] = rss.getString("penulis");
+              data[3] = rss.getString("harga");
+              model.addRow(data);
+          }
+      }catch(Exception e){
+        System.out.println(e.getMessage());
+        }
+  }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -81,7 +138,7 @@ public class FormDataBuku extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         txtCari = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
+        comboSearchBy = new javax.swing.JComboBox();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
@@ -215,8 +272,18 @@ public class FormDataBuku extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
+        txtCari.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                txtCariCaretUpdate(evt);
+            }
+        });
         txtCari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCariActionPerformed(evt);
@@ -228,10 +295,10 @@ public class FormDataBuku extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Judul", "Penulis" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        comboSearchBy.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Judul", "Penulis" }));
+        comboSearchBy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                comboSearchByActionPerformed(evt);
             }
         });
 
@@ -253,7 +320,7 @@ public class FormDataBuku extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(comboSearchBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(51, 51, 51)
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -271,7 +338,7 @@ public class FormDataBuku extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboSearchBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -293,12 +360,36 @@ TampilData();
         String judul = txtJudul.getText();
         String penulis = cmbPenulis.getSelectedItem().toString();
         int harga = Integer.parseInt(txtHarga.getText());
-        TambahData(judul, penulis, harga);
-        
+        try {
+            String sql = "SELECT * FROM buku WHERE judul='"+judul+"' AND penulis='"+"';";
+            stt = con.createStatement();
+            rss = stt.executeQuery(sql);
+            if (rss.next()){
+                JOptionPane.showMessageDialog(null, "Gagal menyimpan data");
+            }
+            else {
+                TambahData(judul, penulis, harga);
+            }
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }
+        InitTable();
+        TampilData();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        int baris = jTable1.getSelectedRow();
+        String id = jTable1.getValueAt(baris, 0).toString();
+        String judul = txtJudul.getText();
+        String penulis = cmbPenulis.getSelectedItem().toString();
+        String harga = txtHarga.getText();
+        if(UbahData(id, judul, penulis, harga))
+            JOptionPane.showMessageDialog(null, "Berhasil Ubah Data");
+        else
+            JOptionPane.showConfirmDialog(null, "Gagal Ubah Data");
+        
+        InitTable();TampilData();
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -314,7 +405,7 @@ TampilData();
         jTable2.addColumn("Penulis");
         jTable2.addColumn("Harga");
         try{
-            String sql = "Select * from buku where "+jComboBox1.getSelectedItem().toString()+" like '%"+txtCari.getText()+"%'";
+            String sql = "Select * from buku where "+comboSearchBy.getSelectedItem().toString()+" like '%"+txtCari.getText()+"%'";
             stt =con.createStatement();
             rss = stt.executeQuery(sql);
             while (rss.next()) {
@@ -330,9 +421,9 @@ TampilData();
         }            
     }//GEN-LAST:event_txtCariKeyTyped
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void comboSearchByActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSearchByActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_comboSearchByActionPerformed
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
@@ -341,8 +432,35 @@ TampilData();
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        int baris = jTable1.getSelectedRow();
+        String id = jTable1.getValueAt(baris, 0).toString();
+        if (HapusData(id))
+            JOptionPane.showMessageDialog(null, "Berhasil Hapus Data");
+        else
+            JOptionPane.showConfirmDialog(null, "Gagal Hapus Data");
+        
+        InitTable();TampilData();
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        int baris = jTable1.getSelectedRow();
+        
+        txtJudul.setText(jTable1.getValueAt(baris, 1).toString());
+        cmbPenulis.setSelectedItem(jTable1.getValueAt(baris, 2).toString());
+        txtHarga.setText(jTable1.getValueAt(baris, 3).toString());
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void txtCariCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_txtCariCaretUpdate
+        // TODO add your handling code here:
+        InitTable();
+        if(txtCari.getText().length()==0){
+            TampilData();
+        }else{
+            PencarianData(comboSearchBy.getSelectedItem().toString(),txtCari.getText());
+        }
+    }//GEN-LAST:event_txtCariCaretUpdate
 
     /**
      * @param args the command line arguments
@@ -381,11 +499,11 @@ TampilData();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox cmbPenulis;
+    private javax.swing.JComboBox comboSearchBy;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
